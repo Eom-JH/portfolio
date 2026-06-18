@@ -1,0 +1,39 @@
+/* 画面全体の基本設定 */
+body {
+    margin: 0;
+    font-family: Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* 共通の横幅設定 */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* ヘッダー */
+.header {
+    background-color: #1f2937;
+    color: white;
+    padding: 48px 0;
+    text-align: center;
+}
+
+/* セクション */
+.section {
+    background-color: white;
+    margin-top: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* フッター */
+.footer {
+    margin-top: 40px;
+    padding: 24px;
+    text-align: center;
+    color: #666;
+}
