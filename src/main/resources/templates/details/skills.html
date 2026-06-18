@@ -1,10 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スキル | Eom Junho Portfolio</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
+<div class="detail-page">
 
+    <aside class="side-bar">
+        <div class="side-title">
+            <a th:href="@{/}">Eom Junho</a>
+            <p>Portfolio</p>
+        </div>
+
+        <nav class="side-nav">
+            <a th:href="@{/about}">自己紹介</a>
+            <a th:href="@{/pr}">自己PR</a>
+            <a class="active" th:href="@{/skills}">スキル</a>
+            <a th:href="@{/projects}">プロジェクト</a>
+            <a th:href="@{/documents}">応募書類</a>
+        </nav>
+
+        <div class="side-footer">
+            <a th:href="@{/}">トップへ戻る</a>
+        </div>
+    </aside>
+
+    <main class="detail-content">
+        <section class="content-card">
+            <p class="content-label">Skills</p>
+
+            <h1>スキル</h1>
+
+            <div class="skill-list">
+                <div class="skill-item">
+                    <h2>Backend</h2>
+                    <p>Java / Spring Boot / Spring MVC</p>
+                </div>
+
+                <div class="skill-item">
+                    <h2>Frontend</h2>
+                    <p>HTML / CSS / JavaScript / Thymeleaf</p>
+                </div>
+
+                <div class="skill-item">
+                    <h2>Database</h2>
+                    <p>Oracle / PostgreSQL / SQL</p>
+                </div>
+
+                <div class="skill-item">
+                    <h2>Cloud / Tools</h2>
+                    <p>AWS / Git / GitHub / IntelliJ IDEA</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</div>
 </body>
 </html>

@@ -1,10 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己PR | Eom Junho Portfolio</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
+<div class="detail-page">
 
+    <aside class="side-bar">
+        <div class="side-title">
+            <a th:href="@{/}">Eom Junho</a>
+            <p>Portfolio</p>
+        </div>
+
+        <nav class="side-nav">
+            <a th:href="@{/about}">自己紹介</a>
+            <a class="active" th:href="@{/pr}">自己PR</a>
+            <a th:href="@{/skills}">スキル</a>
+            <a th:href="@{/projects}">プロジェクト</a>
+            <a th:href="@{/documents}">応募書類</a>
+        </nav>
+
+        <div class="side-footer">
+            <a th:href="@{/}">トップへ戻る</a>
+        </div>
+    </aside>
+
+    <main class="detail-content">
+        <section class="content-card">
+            <p class="content-label">Self PR</p>
+
+            <h1>自己PR</h1>
+
+            <p>
+                私の強みは、既存システムの仕様を丁寧に把握し、影響範囲を意識しながら実装を進められる点です。
+            </p>
+
+            <p>
+                業務システム開発では、画面修正、入力チェック、Controller処理、テスト対応などを経験し、
+                保守性と可読性を意識した実装を心がけてきました。
+            </p>
+
+            <p>
+                今後は、Java / Spring Bootの開発経験を活かしながら、
+                AWSなどのクラウド技術も習得し、より幅広い領域で貢献できるエンジニアを目指しています。
+            </p>
+        </section>
+    </main>
+
+</div>
 </body>
 </html>

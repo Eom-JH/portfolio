@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己紹介 | Eom Junho Portfolio</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="detail-page">
+
+    <!-- 左サイドバー -->
+    <aside class="side-bar">
+        <div class="side-title">
+            <a th:href="@{/}">Eom Junho</a>
+            <p>Portfolio</p>
+        </div>
+
+        <nav class="side-nav">
+            <a class="active" th:href="@{/about}">自己紹介</a>
+            <a th:href="@{/projects}">プロジェクト</a>
+            <a th:href="@{/skills}">スキル</a>
+            <a th:href="@{/documents}">応募書類</a>
+        </nav>
+
+        <div class="side-footer">
+            <a th:href="@{/}">トップへ戻る</a>
+        </div>
+    </aside>
+
+    <!-- 本文エリア -->
+    <main class="detail-content">
+        <section class="content-card">
+            <p class="content-label">About Me</p>
+
+            <h1>自己紹介</h1>
+
+            <p>
+                私はEom Junhoと申します。韓国出身のWebエンジニアとして、
+                現在は日本で業務システム開発に携わっています。
+            </p>
+
+            <p>
+                Java、Spring、Thymeleafを中心に、画面実装、バリデーション、
+                Controller処理、テスト対応など、Webアプリケーション開発の経験を積んできました。
+            </p>
+
+            <p>
+                今後は、これまでの開発経験に加えてAWSなどのクラウド技術も活用し、
+                設計から実装、運用まで幅広く対応できるエンジニアを目指しています。
+            </p>
+        </section>
+    </main>
+
+</div>
+</body>
+</html>
