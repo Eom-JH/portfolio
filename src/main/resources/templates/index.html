@@ -2,48 +2,64 @@
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio | Eom Junho</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初期ページ</title>
+
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-<header class="header">
-    <div class="container">
-        <h1> Eom Junho Portfolio</h1>
-        <p>Java / Spring Boot / AWS を学習・活用しているエンジニアです。</p>
-    </div>
-</header>
+<div class="top-page">
 
-<main class="container">
-    <section class="section">
-        <h2>自己紹介</h2>
-        <p>
-            Java、Spring Boot、Thymeleafを中心にWebアプリケーション開発を行っています。
-            今後はAWSを活用したクラウド環境での開発・運用にも挑戦していきたいと考えています。
-        </p>
-    </section>
+    <!-- メイン表示エリア -->
+    <main class="hero">
+        <div class="hero-content">
 
-    <section class="section">
-        <h2>スキル</h2>
-        <ul>
-            <li>Java</li>
-            <li>Spring Boot</li>
-            <li>Thymeleaf</li>
-            <li>HTML / CSS / JavaScript</li>
-            <li>AWS EC2</li>
-        </ul>
-    </section>
+            <h1 class="hero-title">
+                こんにちは！
+            </h1>
 
-    <section class="section">
-        <h2>プロジェクト概要</h2>
-        <p>
-            本サイトは、Spring BootとThymeleafを利用して作成したポートフォリオサイトです。
-            Mavenでビルドし、最終的にはAWS EC2上にデプロイする予定です。
-        </p>
-    </section>
-</main>
+            <p class="hero-message">
+                初めまして、私はEom Junhoと申します。<br>
+                このたびは本ページをご覧いただき、誠にありがとうございます。<br>
+                私について詳しくご覧になりたい方は、下記のボタンをクリックしてください。
+            </p>
 
-<footer class="footer">
-    <p>&copy; 2026 Eom Junho</p>
-</footer>
+            <a class="hero-button" th:href="@{/about}">
+                オムさんを詳しく見る
+            </a>
+
+        </div>
+    </main>
+
+    <!-- 外部リンクエリア -->
+    <footer class="top-footer">
+        <a href="https://www.linkedin.com/in/junho-eom-70b47b367/" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+        </a>
+
+        <span class="footer-separator">/</span>
+
+        <a href="https://github.com/Eom-JH" target="_blank" rel="noopener noreferrer">
+            GitHub
+        </a>
+
+        <span class="footer-separator">/</span>
+        <button type="button"
+                class="footer-link-button"
+                id="copyEmailButton"
+                data-email="djawnsgh537@gmail.com">
+            Email
+        </button>
+
+        <span class="copy-message" id="copyMessage">
+            メールアドレスをコピーしました
+        </span>
+    </footer>
+
+</div>
+
+<!-- メインスクリプト -->
+<script th:src="@{/js/main.js}"></script>
+
 </body>
 </html>
