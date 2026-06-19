@@ -3,23 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自己PR | Eom Junho Portfolio</title>
+    <title>サイト情報 | Eom Junho Portfolio</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
 <div class="detail-page">
 
     <aside class="side-bar">
-        <div class="side-title">
-            <a th:href="@{/}">Eom Junho</a>
-            <p>Portfolio</p>
+        <div class="profile-section">
+            <img
+                    src="/files/profile-avatar-sharp-192.jpg"
+                    srcset="/files/profile-avatar-sharp-192.jpg 1x,
+                /files/profile-avatar-sharp-384.jpg 2x"
+                    alt="Profile photo"
+                    class="profile-img">
+
+            <h1 class="profile-name">嚴 俊浩</h1>
+            <p class="profile-title">Java / Spring Web Application Engineer</p>
         </div>
 
         <nav class="side-nav">
             <a th:href="@{/about}">自己紹介</a>
             <a th:href="@{/projects}">経歴</a>
             <a th:href="@{/skills}">スキル</a>
-            <a class="active" th:href="@{/documents}">応募書類</a>
+            <a th:href="@{/documents}">応募書類</a>
+            <a class="active" th:href="@{/info}">サイト説明</a>
         </nav>
 
         <div class="side-footer">
@@ -29,22 +37,26 @@
 
     <main class="detail-content">
         <section class="content-card">
-            <p class="content-label">Self PR</p>
+            <p class="content-label">Site Info</p>
 
-            <h1>自己PR</h1>
+            <h1>About This Site</h1>
 
             <p>
-                私の強みは、既存システムの仕様を丁寧に把握し、影響範囲を意識しながら実装を進められる点です。
+                このサイトは、私自身の経歴やスキルを紹介するために作成したポートフォリオサイトです。<br>
+                Spring BootとThymeleafを使用し、シンプルな構成で実装しています。
             </p>
 
             <p>
-                業務システム開発では、画面修正、入力チェック、Controller処理、テスト対応などを経験し、
-                保守性と可読性を意識した実装を心がけてきました。
+                Webサイトとしての機能は必要最小限にしつつ、AWS上でのデプロイや運用を意識して作成しました。
             </p>
 
             <p>
-                今後は、Java / Spring Bootの開発経験を活かしながら、
-                AWSなどのクラウド技術も習得し、より幅広い領域で貢献できるエンジニアを目指しています。
+                アプリケーション開発だけでなく、EC2、Linux、セキュリティグループ、ポート設定など、<br>
+                クラウド環境でWebアプリケーションを公開する一連の流れを学ぶことを目的としています。
+            </p>
+
+            <p>
+                デザインや構成についてお気づきの点がございましたら、メールにてご連絡いただけますと幸いです。
             </p>
         </section>
     </main>

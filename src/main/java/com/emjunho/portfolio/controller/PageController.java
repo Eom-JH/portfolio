@@ -30,16 +30,6 @@ public class PageController {
     }
 
     /**
-     * 自己PRページを表示する
-     *
-     * @return 自己PRページのテンプレート名
-     */
-    @GetMapping("/pr")
-    public String pr() {
-        return "details/pr";
-    }
-
-    /**
      * スキルページを表示する
      *
      * @return スキルページのテンプレート名
@@ -67,5 +57,15 @@ public class PageController {
     @GetMapping("/documents")
     public String documents() {
         return "details/documents";
+    }
+
+    /**
+     * サイト説明ページを表示する
+     *
+     * @return 応募書類ページのテンプレート名
+     */
+    @GetMapping("/info")
+    public String info() {
+        return "details/info";
     }
 }

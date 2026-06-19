@@ -12,16 +12,24 @@
 
     <!-- 左サイドバー -->
     <aside class="side-bar">
-        <div class="side-title">
-            <a th:href="@{/}">Eom Junho</a>
-            <p>Portfolio</p>
+        <div class="profile-section">
+            <img
+                src="/files/profile-avatar-sharp-192.jpg"
+                srcset="/files/profile-avatar-sharp-192.jpg 1x,
+                /files/profile-avatar-sharp-384.jpg 2x"
+                alt="Profile photo"
+                class="profile-img">
+
+            <h1 class="profile-name">嚴 俊浩</h1>
+            <p class="profile-title">Java / Spring Web Application Engineer</p>
         </div>
 
         <nav class="side-nav">
             <a class="active" th:href="@{/about}">自己紹介</a>
-            <a th:href="@{/projects}">プロジェクト</a>
+            <a th:href="@{/projects}">経歴</a>
             <a th:href="@{/skills}">スキル</a>
             <a th:href="@{/documents}">応募書類</a>
+            <a th:href="@{/info}">サイト説明</a>
         </nav>
 
         <div class="side-footer">
@@ -37,18 +45,18 @@
             <h1>自己紹介</h1>
 
             <p>
-                私はEom Junhoと申します。韓国出身のWebエンジニアとして、
-                現在は日本で業務システム開発に携わっています。
+                初めまして、Eom Junhoと申します。
+                現在は日本の開発現場にて、Javaを中心とした業務システム開発に携わっています。
             </p>
 
             <p>
-                Java、Spring、Thymeleafを中心に、画面実装、バリデーション、
-                Controller処理、テスト対応など、Webアプリケーション開発の経験を積んできました。
+                主にSpring MVC、Thymeleaf、HTML、CSS、JavaScriptを使用し、詳細設計、実装、単体テスト、結合テストまで経験してきました。
+                直近では、共済系システムにおける画面修正、入力チェック、モーダル制御、ログ・エラー処理、帳票関連の対応などを担当しています。
             </p>
 
             <p>
-                今後は、これまでの開発経験に加えてAWSなどのクラウド技術も活用し、
-                設計から実装、運用まで幅広く対応できるエンジニアを目指しています。
+                開発では、既存処理への影響や保守性を意識しながら、仕様を正確に理解して実装することを大切にしています。
+                また、AWS SAAを取得しており、今後はアプリケーション開発に加えて、クラウドやインフラの知識も活かせるエンジニアを目指しています。
             </p>
         </section>
     </main>

@@ -10,17 +10,24 @@
 <div class="detail-page">
 
     <aside class="side-bar">
-        <div class="side-title">
-            <a th:href="@{/}">Eom Junho</a>
-            <p>Portfolio</p>
+        <div class="profile-section">
+            <img
+                    src="/files/profile-avatar-sharp-192.jpg"
+                    srcset="/files/profile-avatar-sharp-192.jpg 1x,
+                /files/profile-avatar-sharp-384.jpg 2x"
+                    alt="Profile photo"
+                    class="profile-img">
+
+            <h1 class="profile-name">嚴 俊浩</h1>
+            <p class="profile-title">Java / Spring Web Application Engineer</p>
         </div>
 
         <nav class="side-nav">
             <a th:href="@{/about}">自己紹介</a>
-            <a th:href="@{/pr}">自己PR</a>
+            <a class="active" th:href="@{/projects}">経歴</a>
             <a th:href="@{/skills}">スキル</a>
-            <a class="active" th:href="@{/projects}">プロジェクト</a>
             <a th:href="@{/documents}">応募書類</a>
+            <a th:href="@{/info}">サイト説明</a>
         </nav>
 
         <div class="side-footer">
@@ -30,24 +37,48 @@
 
     <main class="detail-content">
         <section class="content-card">
-            <p class="content-label">Projects</p>
+            <p class="content-label">Project Experience</p>
 
-            <h1>プロジェクト</h1>
-
-            <h2>ポートフォリオサイト</h2>
-
+            <h2>大手都市銀行向け業務Webアプリケーション開発</h2>
             <p>
-                Spring BootとThymeleafを利用して作成した自己紹介用ポートフォリオサイトです。
+                金融系業務Webアプリケーションの開発プロジェクトに参画し、既存機能の改修、不具合調査、単体テスト、結合テストを担当しました。
+            </p>
+            <p>
+                主に画面項目、入力チェック、検索処理、データ連携処理の実装およびテストを行い、SQLを用いたデータ確認やテストデータ作成にも対応しました。
+                金融系システムとして求められる正確性を意識し、仕様確認や影響範囲の確認を丁寧に行いながら、安定したシステム運用に貢献しました。
+            </p>
+            <h3>担当工程</h3>
+            <p>
+                開発 / 単体テスト / 結合テスト
             </p>
 
+            <h3>使用技術</h3>
+            <p>JavaScript / Perl / Spring / Oracle / Eclipse / Git / Redmine</p>
+
+            <h2>大手共済・保険関連団体向け業務システム開発</h2>
             <p>
-                Mavenでプロジェクトを管理し、Controllerによる画面遷移、
-                Thymeleafによるテンプレート表示、CSSによる画面レイアウトを実装しています。
+                生命共済および火災共済保険業務に関する業務システムの開発・保守プロジェクトに参画しました。<br>
+                契約、申込、照会、保険・共済関連データの管理機能など、業務アプリケーションの詳細設計、画面開発、バックエンド処理、テスト、改修を担当しました。
+            </p>
+            <p>
+                主に画面機能、検索機能、登録・更新処理、入力チェック、データチェック処理の実装を行い、SQLによるデータ抽出、調査、整合性確認にも対応しました。<br>
+                また、受入テスト対応や不具合修正、他チームから起票された障害調査・修正対応も担当しました。
             </p>
 
+
             <p>
-                今後はAWS EC2上にデプロイし、クラウド環境でWebアプリケーションを公開する構成を予定しています。
+                3名体制のメンバーとして火災関連画面全般を担当し、担当範囲に責任を持って作業を進めました。<br>
+                既存処理への影響や保守性を意識しながら、品質と安定性を重視して開発に取り組みました。
             </p>
+
+            <h3>担当工程</h3>
+            <p>
+                詳細設計 / 開発 / 単体テスト / 結合テスト / 不具合調査・修正
+            </p>
+
+            <h3>使用技術</h3>
+            <p>Java / JavaScript / HTML / CSS / Spring / Thymeleaf / PostgreSQL<br>
+                DBeaver / Eclipse / VS Code / Git / Azure DevOps / SVN</p>
         </section>
     </main>
 

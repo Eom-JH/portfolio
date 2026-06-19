@@ -399,3 +399,34 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/** profile領域調整 */
+.profile-section {
+    text-align: center;
+    padding: 32px 16px 24px;
+}
+
+.profile-img {
+    width: 40%;
+    max-width: 112px;
+    min-width: 88px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 35%;
+    display: block;
+    margin: 0 auto 16px;
+}
+
+.profile-name {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.profile-title {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.4;
+}

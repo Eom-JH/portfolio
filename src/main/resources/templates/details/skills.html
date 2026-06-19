@@ -10,17 +10,24 @@
 <div class="detail-page">
 
     <aside class="side-bar">
-        <div class="side-title">
-            <a th:href="@{/}">Eom Junho</a>
-            <p>Portfolio</p>
+        <div class="profile-section">
+            <img
+                    src="/files/profile-avatar-sharp-192.jpg"
+                    srcset="/files/profile-avatar-sharp-192.jpg 1x,
+                /files/profile-avatar-sharp-384.jpg 2x"
+                    alt="Profile photo"
+                    class="profile-img">
+
+            <h1 class="profile-name">嚴 俊浩</h1>
+            <p class="profile-title">Java / Spring Web Application Engineer</p>
         </div>
 
         <nav class="side-nav">
             <a th:href="@{/about}">自己紹介</a>
-            <a th:href="@{/pr}">自己PR</a>
+            <a th:href="@{/projects}">経歴</a>
             <a class="active" th:href="@{/skills}">スキル</a>
-            <a th:href="@{/projects}">プロジェクト</a>
             <a th:href="@{/documents}">応募書類</a>
+            <a th:href="@{/info}">サイト説明</a>
         </nav>
 
         <div class="side-footer">
@@ -47,12 +54,14 @@
 
                 <div class="skill-item">
                     <h2>Database</h2>
-                    <p>Oracle / PostgreSQL / SQL</p>
+                    <p>PostgreSQL / Oracle / SQL</p>
                 </div>
 
                 <div class="skill-item">
                     <h2>Cloud / Tools</h2>
-                    <p>AWS / Git / GitHub / IntelliJ IDEA</p>
+                    <p>AWS / Git / GitHub / IntelliJ IDEA / Eclipse<br>
+                        Azure DevOps / DBeaverなど
+                    </p>
                 </div>
             </div>
         </section>
