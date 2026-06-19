@@ -1,48 +1,50 @@
 // メールアドレスをクリップボードにコピーする
 document.addEventListener("DOMContentLoaded", function () {
-    const copyEmailButton = document.getElementById("copyEmailButton");
-    const copyMessage = document.getElementById("copyMessage");
+    setupCopyEmailButton("copyEmailButton", "copyMessage");
+    setupCopyEmailButton("infoCopyEmailButton", "infoCopyMessage");
+});
 
-    if (!copyEmailButton || !copyMessage) {
+function setupCopyEmailButton(buttonId, messageId) {
+    const button = document.getElementById(buttonId);
+    const message = document.getElementById(messageId);
+
+    if (!button || !message) {
         return;
     }
 
-    copyEmailButton.addEventListener("click", async function () {
-        const email = copyEmailButton.dataset.email;
+    button.addEventListener("click", async function () {
+        const email = button.dataset.email;
 
         try {
             await copyTextToClipboard(email);
 
-            copyMessage.textContent = "メールアドレスをコピーしました";
-            copyMessage.classList.add("show");
+            message.textContent = "メールアドレスをコピーしました";
+            message.classList.add("show");
 
             setTimeout(function () {
-                copyMessage.classList.remove("show");
+                message.classList.remove("show");
             }, 1800);
         } catch (error) {
             console.error("メールアドレスのコピーに失敗しました:", error);
 
-            copyMessage.textContent = "コピーに失敗しました";
-            copyMessage.classList.add("show");
+            message.textContent = "コピーに失敗しました";
+            message.classList.add("show");
 
             setTimeout(function () {
-                copyMessage.classList.remove("show");
+                message.classList.remove("show");
             }, 1800);
         }
     });
-});
+}
 
 async function copyTextToClipboard(text) {
-    // HTTPS / localhost では Clipboard API を使用
     if (navigator.clipboard && window.isSecureContext) {
         await navigator.clipboard.writeText(text);
         return;
     }
 
-    // HTTP 環境用の fallback
     const textarea = document.createElement("textarea");
     textarea.value = text;
-
     textarea.style.position = "fixed";
     textarea.style.left = "-9999px";
     textarea.style.top = "0";

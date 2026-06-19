@@ -11,12 +11,11 @@
 
     <aside class="side-bar">
         <div class="profile-section">
-            <img
-                    src="/files/profile-avatar-sharp-192.jpg"
-                    srcset="/files/profile-avatar-sharp-192.jpg 1x,
-                /files/profile-avatar-sharp-384.jpg 2x"
-                    alt="Profile photo"
-                    class="profile-img">
+            <img src="/files/profile-avatar-sharp-192.jpg"
+                srcset="/files/profile-avatar-sharp-192.jpg 1x,
+            /files/profile-avatar-sharp-384.jpg 2x"
+                alt="Profile photo"
+                class="profile-img">
 
             <h1 class="profile-name">嚴 俊浩</h1>
             <p class="profile-title">Java / Spring Web Application Engineer</p>
@@ -26,7 +25,7 @@
             <a th:href="@{/about}">自己紹介</a>
             <a th:href="@{/projects}">経歴</a>
             <a th:href="@{/skills}">スキル</a>
-            <a th:href="@{/documents}">応募書類</a>
+            <a th:href="@{/documents}">書類</a>
             <a class="active" th:href="@{/info}">サイト説明</a>
         </nav>
 
@@ -42,25 +41,42 @@
             <h1>About This Site</h1>
 
             <p>
-                このサイトは、私自身の経歴やスキルを紹介するために作成したポートフォリオサイトです。<br>
-                Spring BootとThymeleafを使用し、シンプルな構成で実装しています。
+                このサイトは、自身の経歴、スキル、資格、プロジェクト経験を紹介するために作成したポートフォリオサイトです。<br>
+                Spring BootとThymeleafを使用して実装し、AWS EC2上にデプロイしています。
             </p>
 
             <p>
-                Webサイトとしての機能は必要最小限にしつつ、AWS上でのデプロイや運用を意識して作成しました。
+                現在は、自己紹介、スキル、実務プロジェクト経験、履歴書・職務経歴書の確認、連絡先など、
+                基本的なポートフォリオ機能を中心に構成しています。<br>
+                また、Nginxをリバースプロキシとして設定し、独自ドメインおよびHTTPSにも対応しています。
             </p>
 
             <p>
-                アプリケーション開発だけでなく、EC2、Linux、セキュリティグループ、ポート設定など、<br>
-                クラウド環境でWebアプリケーションを公開する一連の流れを学ぶことを目的としています。
+                本サイトでは、画面機能は必要最小限にしつつ、アプリケーション開発から
+                AWS上でのデプロイ・運用までの一連の流れを理解することを目的としています。<br>
             </p>
 
             <p>
+                今後は、新しく取り組む個人開発プロジェクトや学習内容を追加するためのカテゴリを設け、継続的に内容を更新していく予定です。
                 デザインや構成についてお気づきの点がございましたら、メールにてご連絡いただけますと幸いです。
             </p>
-        </section>
-    </main>
 
+            <button type="button"
+                    class="info-email-button"
+                    id="infoCopyEmailButton"
+                    data-email="djawnsgh537@gmail.com">
+                Contact
+            </button>
+
+            <span class="copy-message" id="infoCopyMessage">
+        メールアドレスをコピーしました。
+        </span>
+        </section>
+
+    </main>
 </div>
+
+<!-- メインスクリプト -->
+<script th:src="@{/js/main.js}"></script>
 </body>
 </html>

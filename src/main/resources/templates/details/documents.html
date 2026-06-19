@@ -26,7 +26,7 @@
             <a th:href="@{/about}">自己紹介</a>
             <a th:href="@{/projects}">経歴</a>
             <a th:href="@{/skills}">スキル</a>
-            <a class="active" th:href="@{/documents}">応募書類</a>
+            <a class="active" th:href="@{/documents}">書類</a>
             <a th:href="@{/info}">サイト説明</a>
         </nav>
 
@@ -37,9 +37,9 @@
 
     <main class="detail-content">
         <section class="content-card">
-            <p class="content-label">Documents</p>
+            <p class="content-label">Resume</p>
 
-            <h1>応募書類</h1>
+            <h1>書類</h1>
 
             <p>
                 履歴書および職務経歴書をPDF形式でダウンロードできます。
@@ -49,10 +49,12 @@
                 <a class="document-button" th:href="@{/files/履歴書_嚴俊浩（オムジュンホ）.pdf}" download>
                     履歴書をダウンロード
                 </a>
-
                 <a class="document-button" th:href="@{/files/職務経歴書_嚴俊浩（オムジュンホ）.pdf}" download>
                     職務経歴書をダウンロード
                 </a>
+            </div>
+            <div class="documents-updated-date">
+                <p class="document-meta">PDF / 最終更新：2026年06月20日</p>
             </div>
         </section>
     </main>

@@ -1,6 +1,6 @@
-/* ============================== */
+/** ======================================================= */
 /* 初期ページ共通レイアウト        */
-/* ============================== */
+/** ======================================================= */
 * {
     box-sizing: border-box;
 }
@@ -86,6 +86,11 @@ body {
     letter-spacing: 0.08em;
     transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
+/** ======================================================= */
+
+/** ======================================================= */
+/** 共通 */
+/** ======================================================= */
 
 /* ボタンにマウスを乗せた時の動き */
 .hero-button:hover {
@@ -191,9 +196,35 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
-/* ============================== */
-/* 詳細ページ共通レイアウト        */
-/* ============================== */
+
+/* スマートフォン表示用 */
+@media (max-width: 768px) {
+    .detail-page {
+        flex-direction: column;
+    }
+
+    .side-bar {
+        width: 100%;
+        min-height: auto;
+        padding: 24px;
+    }
+
+    .side-nav {
+        margin-top: 28px;
+    }
+
+    .detail-content {
+        padding: 24px;
+    }
+
+    .content-card {
+        padding: 28px;
+    }
+
+    .content-card h1 {
+        font-size: 32px;
+    }
+}
 
 /* 詳細ページ全体 */
 .detail-page {
@@ -312,37 +343,11 @@ body {
     line-height: 2;
     color: #4b5563;
 }
+/** ======================================================= */
 
-/* スマートフォン表示用 */
-@media (max-width: 768px) {
-    .detail-page {
-        flex-direction: column;
-    }
-
-    .side-bar {
-        width: 100%;
-        min-height: auto;
-        padding: 24px;
-    }
-
-    .side-nav {
-        margin-top: 28px;
-    }
-
-    .detail-content {
-        padding: 24px;
-    }
-
-    .content-card {
-        padding: 28px;
-    }
-
-    .content-card h1 {
-        font-size: 32px;
-    }
-}
-
-/* スキル一覧 */
+/** ======================================================= */
+/* スキル領域 */
+/** ======================================================= */
 .skill-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -367,40 +372,16 @@ body {
     margin: 0;
 }
 
-/* 応募書類ダウンロードボタン */
-.document-buttons {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-top: 32px;
-}
-
-.document-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 14px 24px;
-    border-radius: 999px;
-    background-color: #1f2937;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 700;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
-}
-
-.document-button:hover {
-    transform: translateY(-3px);
-    background-color: #111827;
-    box-shadow: 0 10px 20px rgba(17, 24, 39, 0.2);
-}
-
 @media (max-width: 768px) {
     .skill-list {
         grid-template-columns: 1fr;
     }
 }
+/** ======================================================= */
 
+/** ======================================================= */
 /** profile領域調整 */
+/** ======================================================= */
 .profile-section {
     text-align: center;
     padding: 32px 16px 24px;
@@ -430,3 +411,82 @@ body {
     color: #666;
     line-height: 1.4;
 }
+/** ======================================================= */
+
+/** ======================================================= */
+/** 書類領域 */
+/** ======================================================= */
+
+/* 応募書類ダウンロードボタン */
+.document-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.document-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    border-radius: 999px;
+    background-color: #1f2937;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.document-button:hover {
+    transform: translateY(-3px);
+    background-color: #111827;
+    box-shadow: 0 10px 20px rgba(17, 24, 39, 0.2);
+}
+
+.document-meta {
+    margin: 4px 0 12px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.documents-updated-date {
+    padding-top: 24px;
+    font-size: 0.85rem;
+    color: #888;
+    text-align: left;
+}
+
+.info-contact {
+    padding-top: 32px;
+    text-align: center;
+}
+
+.info-contact-text {
+    margin-bottom: 14px;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+.info-email-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.info-email-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+/** ======================================================= */
