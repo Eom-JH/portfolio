@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サイト情報 | Eom Junho Portfolio</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="detail-page">
+
+    <aside class="side-bar">
+        <div class="profile-section">
+            <img src="/files/profile-avatar-sharp-192.jpg"
+                srcset="/files/profile-avatar-sharp-192.jpg 1x,
+            /files/profile-avatar-sharp-384.jpg 2x"
+                alt="Profile photo"
+                class="profile-img">
+
+            <h1 class="profile-name">嚴 俊浩</h1>
+            <p class="profile-title">Java / Spring Web Application Engineer</p>
+        </div>
+
+        <nav class="side-nav">
+            <a th:href="@{/about}">自己紹介</a>
+            <a th:href="@{/projects}">経歴</a>
+            <a th:href="@{/skills}">スキル</a>
+            <a th:href="@{/documents}">書類</a>
+            <a class="active" th:href="@{/info}">サイト説明</a>
+        </nav>
+
+        <div class="side-footer">
+            <a th:href="@{/}">トップへ戻る</a>
+        </div>
+    </aside>
+
+    <main class="detail-content">
+        <section class="content-card">
+            <p class="content-label">Site Info</p>
+
+            <h1>About This Site</h1>
+
+            <p>
+                このサイトは、自身の経歴、スキル、資格、プロジェクト経験を紹介するために作成したポートフォリオサイトです。<br>
+                Spring BootとThymeleafを使用して実装し、AWS EC2上にデプロイしています。
+            </p>
+
+            <p>
+                現在は、自己紹介、スキル、実務プロジェクト経験、履歴書・職務経歴書の確認、連絡先など、
+                基本的なポートフォリオ機能を中心に構成しています。<br>
+                また、Nginxをリバースプロキシとして設定し、独自ドメインおよびHTTPSにも対応しています。
+            </p>
+
+            <p>
+                本サイトでは、画面機能は必要最小限にしつつ、アプリケーション開発から
+                AWS上でのデプロイ・運用までの一連の流れを理解することを目的としています。<br>
+            </p>
+
+            <p>
+                今後は、新しく取り組む個人開発プロジェクトや学習内容を追加するためのカテゴリを設け、継続的に内容を更新していく予定です。
+                デザインや構成についてお気づきの点がございましたら、メールにてご連絡いただけますと幸いです。
+            </p>
+
+            <button type="button"
+                    class="info-email-button"
+                    id="infoCopyEmailButton"
+                    data-email="djawnsgh537@gmail.com">
+                Contact
+            </button>
+
+            <span class="copy-message" id="infoCopyMessage">
+        メールアドレスをコピーしました。
+        </span>
+        </section>
+
+    </main>
+</div>
+
+<!-- メインスクリプト -->
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>

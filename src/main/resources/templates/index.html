@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初期ページ</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="top-page">
+
+    <!-- メイン表示エリア -->
+    <main class="hero">
+        <div class="hero-content">
+
+            <h1 class="hero-title">
+                こんにちは！
+            </h1>
+
+            <p class="hero-message">
+                初めまして、私はEom Junhoと申します。<br>
+                このたびは本ページをご覧いただき、誠にありがとうございます。<br>
+                私について詳しくご覧になりたい方は、下記のボタンをクリックしてください。
+            </p>
+
+            <a class="hero-button" th:href="@{/about}">
+                オムさんを詳しく見る
+            </a>
+
+        </div>
+    </main>
+
+    <!-- 外部リンクエリア -->
+    <footer class="top-footer">
+        <a href="https://www.linkedin.com/in/junho-eom-70b47b367/" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+        </a>
+
+        <span class="footer-separator">/</span>
+
+        <a href="https://github.com/Eom-JH" target="_blank" rel="noopener noreferrer">
+            GitHub
+        </a>
+
+        <span class="footer-separator">/</span>
+        <button type="button"
+                class="footer-link-button"
+                id="copyEmailButton"
+                data-email="djawnsgh537@gmail.com">
+            Email
+        </button>
+
+        <span class="copy-message" id="copyMessage">
+            メールアドレスをコピーしました。
+        </span>
+    </footer>
+
+</div>
+
+<!-- メインスクリプト -->
+<script th:src="@{/js/main.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スキル | Eom Junho Portfolio</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="detail-page">
+
+    <aside class="side-bar">
+        <div class="profile-section">
+            <img
+                    src="/files/profile-avatar-sharp-192.jpg"
+                    srcset="/files/profile-avatar-sharp-192.jpg 1x,
+                /files/profile-avatar-sharp-384.jpg 2x"
+                    alt="Profile photo"
+                    class="profile-img">
+
+            <h1 class="profile-name">嚴 俊浩</h1>
+            <p class="profile-title">Java / Spring Web Application Engineer</p>
+        </div>
+
+        <nav class="side-nav">
+            <a th:href="@{/about}">自己紹介</a>
+            <a th:href="@{/projects}">経歴</a>
+            <a class="active" th:href="@{/skills}">スキル</a>
+            <a th:href="@{/documents}">書類</a>
+            <a th:href="@{/info}">サイト説明</a>
+        </nav>
+
+        <div class="side-footer">
+            <a th:href="@{/}">トップへ戻る</a>
+        </div>
+    </aside>
+
+    <main class="detail-content">
+        <section class="content-card">
+            <p class="content-label">Skills</p>
+
+            <h1>スキル</h1><p>★を付けたスキルは、特に自信のあるスキルです。</p>
+
+            <div class="skill-list">
+                <div class="skill-item">
+                    <h2>Backend</h2>
+                    <p>Java★ / Spring Boot / Spring MVC★</p>
+                </div>
+
+                <div class="skill-item">
+                    <h2>Frontend</h2>
+                    <p>HTML★ / CSS★ / JavaScript / Thymeleaf</p>
+                </div>
+
+                <div class="skill-item">
+                    <h2>Database</h2>
+                    <p>PostgreSQL★ / Oracle / SQL</p>
+                </div>
+
+                <div class="skill-item">
+                    <h2>Cloud / Tools</h2>
+                    <p>AWS★ / Git / GitHub★ / IntelliJ IDEA / Eclipse<br>
+                        Azure DevOps / DBeaverなど
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</div>
+</body>
+</html>
